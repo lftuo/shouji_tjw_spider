@@ -18,7 +18,13 @@ ITEM_PIPELINES = {
     'shouji_tjw_spider.pipelines.ShoujiTjwSpiderPipeline':300
 }
 
-DOWNLOAD_TIMEOUT = 100
+#Mysql数据库的配置信息
+MYSQL_HOST = '127.0.0.1'
+MYSQL_DBNAME = 'spider_shouji'         #数据库名字，请修改
+MYSQL_USER = 'root'             #数据库账号，请修改
+MYSQL_PASSWD = '123456'         #数据库密码，请修改
+
+MYSQL_PORT = 3306
 #LOG_STDOUT = True
 #LOG_FILE = "../log/spider_tjw.log"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
