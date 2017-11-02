@@ -22,6 +22,8 @@ class ShoujiTjwSpiderItem(scrapy.Item):
     type1 = scrapy.Field()
     # 入网型号
     type2 = scrapy.Field()
+    # 手机型号
+    model = scrapy.Field()
     # 上市时间
     time = scrapy.Field()
     # 手机颜色
