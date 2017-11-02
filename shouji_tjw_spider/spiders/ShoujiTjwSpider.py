@@ -164,6 +164,7 @@ class shouji_tjw_spider(scrapy.Spider):
         item['ram'] = ram
         item['screen_material'] = screen_material
         item['battery'] = battery
+        item['data_source'] = '天极网'
         yield item
 
 

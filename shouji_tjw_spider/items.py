@@ -54,3 +54,5 @@ class ShoujiTjwSpiderItem(scrapy.Item):
     battery = scrapy.Field()
     # 商品详情页链接
     url = scrapy.Field()
+    # 添加数据来源
+    data_source = scrapy.Field()
