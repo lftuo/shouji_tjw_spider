@@ -26,11 +26,13 @@ class shouji_tjw_spider(scrapy.Spider):
         url = "http://product.yesky.com/mobilephone/list%s.html"%(i+1)
         start_urls.append(url)
 
-    '''
-    重写解析函数
-    :param response:自动获取URL返回response
-    '''
     def parse(self, response):
+        '''
+        重写解析函数
+        :param response: 自动获取URL返回response
+        :return:
+        '''
+
         phones = response.xpath(".//div[@class='list blue']")
         for phone in phones:
             # 获取详细参数链接
@@ -59,6 +61,12 @@ class shouji_tjw_spider(scrapy.Spider):
             yield request
 
     def parse_param_url(self,response):
+        '''
+        解析手机详情参数
+        :param response:
+        :return:
+        '''
+
         item = response.meta['item']
         type1 = ""
         type2 = ""
